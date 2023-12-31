@@ -1,0 +1,45 @@
+.installation-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 60px;
+
+  .installation {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 56px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .anchor {
+    position: fixed;
+    right: 10px;
+    top: 110px;
+  }
+
+  .anthor-title {
+    a {
+      opacity: 0;
+      margin-left: -1.2em;
+      padding-right: 0.5em;
+      transition: all 0.3s ease-in-out;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85em;
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      & a {
+        opacity: 1;
+      }
+    }
+  }
+}

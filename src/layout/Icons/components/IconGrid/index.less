@@ -1,0 +1,26 @@
+.icon-grid {
+  width: 100%;
+  max-width: 90px;
+  transition: box-shadow 0.2s cubic-bezier(0, 0, 1, 1);
+  margin: 8px 6px 0 6px;
+  box-sizing: border-box;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    background-color: var(--color-bg-2);
+    border: 1px solid var(--color-neutral-3);
+    border-radius: var(--border-radius-medium);
+    cursor: pointer;
+  }
+
+  .icon-name {
+    margin-top: 6px;
+    text-align: center;
+    color: var(--color-text-1);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
