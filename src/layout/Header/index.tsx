@@ -6,8 +6,8 @@ import { ThemeMode } from '@/components/ThemeProvider'
 import { IconCommonProps } from '@/common'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import darkLogo from '@/static/twist-icons-dark.svg'
-import lightLogo from '@/static/twist-icons-light.svg'
+import DarkLogo from '@/static/twist-icons-dark.svg?react'
+import LightLogo from '@/static/twist-icons-light.svg?react'
 import './index.less'
 
 export default function Header() {
@@ -47,10 +47,14 @@ export default function Header() {
       <Menu.Item key='zh'>{t('Chinese')}</Menu.Item>
     </Menu>
   )
+  const Logo = (
+    theme === 'light' ? <LightLogo /> : <DarkLogo />
+  )
 
   const Title = (
     <div className='twist-title' onClick={() => navigate('/')}>
-      <img src={theme === 'light' ? lightLogo : darkLogo} alt="Twist-Icons" />
+      {/* <img src={theme === 'light' ? lightLogo : darkLogo} alt="Twist-Icons" /> */}
+      {Logo}
     </div>
   )
 
