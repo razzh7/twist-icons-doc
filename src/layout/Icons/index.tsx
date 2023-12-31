@@ -15,7 +15,7 @@ function SiteIconDisplay() {
     setListType(type)
   }
   useTitle(`Twist Icons preview for ${currentId}`)
-  console.log(123)
+
   return (
     <div className='icon-content'>
       <Grid.Row style={{ margin: '15px 0' }}>
