@@ -36,10 +36,10 @@ import { IconProvider } from '@twist-space/vue2-icons'
 import { AiThunderboltFilled } from '@twist-space/vue2-icons/ai'
 import { TiModeDark } from '@twist-space/vue2-icons/ti'
 export default {
-components: {
-  IconProvider,
-  AiThunderboltFilled,
-  TiModeDark,
-},
+  components: {
+    IconProvider,
+    AiThunderboltFilled,
+    TiModeDark,
+  }
 }
 </script>`
