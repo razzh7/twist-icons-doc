@@ -6,6 +6,7 @@ import { ThemeMode } from '@/components/ThemeProvider'
 import { IconCommonProps } from '@/common'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { getSystemTheme } from '@/util/theme'
 import DarkLogo from '@/static/twist-icons-dark.svg?react'
 import LightLogo from '@/static/twist-icons-light.svg?react'
 import './index.less'
@@ -14,11 +15,6 @@ export default function Header() {
   const { t, changeLanguage } = useI18n()
   const { theme, toggleTheme } = useTheme()
   const navigate = useNavigate()
-
-
-  useEffect(() => {
-    toggleTheme(theme)
-  }, [theme, toggleTheme])
 
   const ThemeDropList = (
     <Menu
@@ -47,16 +43,27 @@ export default function Header() {
       <Menu.Item key='zh'>{t('Chinese')}</Menu.Item>
     </Menu>
   )
-  const Logo = (
-    theme === 'light' ? <LightLogo /> : <DarkLogo />
-  )
-
+  const ThemeLogo = () => {
+    switch (theme) {
+    case 'light':
+      return <LightLogo />
+    case 'dark':
+      return <DarkLogo />
+    default:
+      return getSystemTheme() === 'light'
+        ? <LightLogo />
+        : <DarkLogo />
+    }
+  }
   const Title = (
     <div className='twist-title' onClick={() => navigate('/')}>
-      {/* <img src={theme === 'light' ? lightLogo : darkLogo} alt="Twist-Icons" /> */}
-      {Logo}
+      <ThemeLogo />
     </div>
   )
+
+  useEffect(() => {
+    toggleTheme(theme)
+  }, [theme, toggleTheme])
 
   return (
     <PageHeader

@@ -1,5 +1,6 @@
 /* eslint-disable no-case-declarations */
 import { ReactNode, createContext, useEffect, useState } from "react"
+import { getCurrentTheme, setArcoTheme, setStorage, getSystemTheme } from '@/util/theme'
 
 export type ThemeMode = 'light' | 'dark' | 'system' | undefined
 export interface ThemeContextProps {
@@ -16,24 +17,25 @@ export const ThemeContext = createContext<ThemeContextProps>({
 })
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const presetTheme = localStorage.getItem('twist-icons-theme') as ThemeMode
-  const [theme, setTheme] = useState<ThemeMode>(presetTheme)
+  const currentTheme = getCurrentTheme() as ThemeMode
+  const [theme, setTheme] = useState<ThemeMode>(currentTheme)
   const handleThemeChange = (theme: ThemeMode) => {
     switch (theme) {
     case 'light':
-      document.body.setAttribute('arco-theme', 'light')
-      localStorage.setItem('twist-icons-theme', 'light')
+      setArcoTheme(theme)
+      setStorage(theme)
+      setTheme(theme)
       break
     case 'dark':
-      document.body.setAttribute('arco-theme', 'dark')
-      localStorage.setItem('twist-icons-theme', 'dark')
+      setArcoTheme(theme)
+      setStorage(theme)
+      setTheme(theme)
       break
     default:
-      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-      const themeToApply = prefersDarkMode ? 'dark' : 'light'
-      document.body.setAttribute('arco-theme', themeToApply)
-      localStorage.setItem('twist-icons-theme', 'system')
-      break
+      const prefersMode = getSystemTheme()
+      setStorage('system')
+      setArcoTheme(prefersMode)
+      setTheme(prefersMode)
     }
   }
   const toggleTheme = (theme: ThemeMode) => {
@@ -46,9 +48,8 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   }
 
   useEffect(() => {
-    const localTheme = localStorage.getItem('twist-icons-theme') as ThemeMode
-    handleThemeChange(localTheme)
-  }, [])
+    setTheme(theme)
+  }, [theme])
 
 
   return (
