@@ -50,7 +50,7 @@ export default function Header() {
 
   const Title = (
     <div className='twist-title' onClick={() => navigate('/')}>
-      <img src={theme === 'dark' ? darkLogo : lightLogo} alt="Twist-Icons" />
+      <img src={theme === 'light' ? lightLogo : darkLogo} alt="Twist-Icons" />
     </div>
   )
 
