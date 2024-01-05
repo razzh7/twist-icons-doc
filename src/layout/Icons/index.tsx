@@ -6,7 +6,6 @@ import { useSearch, useTitle } from '@/hooks'
 import Icons from './components/Icons'
 import { IconCommonProps } from '@/common'
 import type { ListType } from './components/Icons'
-import './index.less'
 
 function SiteIconDisplay() {
   const { currentId, iconValue, searchValue, handleChange } = useSearch()
@@ -17,7 +16,7 @@ function SiteIconDisplay() {
   useTitle(`Twist Icons preview for ${currentId}`)
 
   return (
-    <div className='icon-content'>
+    <div>
       <Grid.Row style={{ margin: '15px 0' }}>
         <Grid.Col span={24} offset={1}>
           <Space>
