@@ -1,0 +1,18 @@
+.icon-item:hover {
+  position: relative;
+}
+
+.icon-item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  border: 1px solid theme('colors.primary.DEFAULT');
+  opacity: 0.4;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
