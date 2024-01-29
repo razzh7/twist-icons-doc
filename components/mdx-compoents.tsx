@@ -2,11 +2,15 @@ import React from 'react'
 import { allDocs } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { CopyButton } from './copy-button'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import { Tip } from './tip'
 import { cn } from '@/lib/utils'
 import '@/styles/mdx.css'
 
 const components = {
+  Button,
+  Link,
   Tip,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
@@ -123,7 +127,6 @@ const components = {
 }
 
 export function Mdx() {
-  console.log('allDocs', allDocs)
   const [docs] = allDocs
   const MDXContent = useMDXComponent(docs.body.code)
   return (
