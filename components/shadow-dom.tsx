@@ -21,7 +21,7 @@ export function ShadowDom({ className, children }: ShadowDomProps) {
   return (
     <Fragment>
       <div ref={node} className={cn(className)} />
-      {rootNode && createPortal(children, rootNode)}
+      {rootNode ? createPortal(children, rootNode) : null}
     </Fragment>
   )
 }

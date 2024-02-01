@@ -99,7 +99,7 @@ export default function IconPage({ params }: IconPageProps) {
         </div>
       </ScrollArea>
       {
-        open && (
+        open ? (
           <Modal
             open={open}
             setOpen={setOpen}
@@ -107,7 +107,7 @@ export default function IconPage({ params }: IconPageProps) {
             name={iconName}
             Icon={ActiveIcon as ReactElement<IconType>}
           />
-        )
+        ) : null
       }
     </div>
   )
