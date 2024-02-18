@@ -28,7 +28,7 @@ IconSets.set('bi', { prefix: 'bi', icons: BootstrapIcons })
 IconSets.set('mdi', { prefix: 'mdi', icons: MaterialDesign })
 IconSets.set('ra', { prefix: 'ra', icons: RadixIcons })
 IconSets.set('sk', { prefix: 'sk', icons: SkillIcons })
-IconSets.set('gg', { prefix: 'sk', icons: Cssgg })
+IconSets.set('gg', { prefix: 'gg', icons: Cssgg })
 IconSets.set('so', { prefix: 'so', icons: Solar })
 
 const _cache = new Map()
