@@ -20,7 +20,7 @@ export function IconSider() {
   return (
     <ScrollArea className='w-60 h-full border-r'>
       <div className='px-2'>
-        <Logo className='flex justify-center sticky top-0 border-b py-1' />
+        <Logo className='flex justify-center sticky top-0 z-50 border-b py-1 bg-background' />
         <aside>
           {
             allCategories().map((item) => (
