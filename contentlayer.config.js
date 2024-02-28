@@ -11,8 +11,8 @@ export const Docs = defineDocumentType(() => ({
   filePathPattern: `**/*.mdx`,
   contentType: 'mdx',
   fields: {
-    title: { type: 'string', required: false },
-    date: { type: 'date', required: false }
+    title: { type: 'string', required: true },
+    date: { type: 'date', required: true }
   },
   computedFields: {
     url: { type: 'string', resolve: (docs) => `/docs/${docs._raw.flattenedPath}` }

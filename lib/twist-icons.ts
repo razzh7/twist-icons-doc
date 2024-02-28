@@ -10,6 +10,10 @@ import * as RadixIcons from '@twist-space/react-icons/ra'
 import * as SkillIcons from '@twist-space/react-icons/sk'
 import * as Cssgg from '@twist-space/react-icons/gg'
 import * as Solar from '@twist-space/react-icons/so'
+import * as ElementPlus from '@twist-space/react-icons/ep'
+import * as TwitterEmoji from '@twist-space/react-icons/te'
+import * as Phosphor from '@twist-space/react-icons/ph'
+import * as SystemUicons from '@twist-space/react-icons/su'
 import { IconsManifest, type IconProps, type IconType } from '@twist-space/react-icons'
 
 interface IconSets {
@@ -30,6 +34,10 @@ IconSets.set('ra', { prefix: 'ra', icons: RadixIcons })
 IconSets.set('sk', { prefix: 'sk', icons: SkillIcons })
 IconSets.set('gg', { prefix: 'gg', icons: Cssgg })
 IconSets.set('so', { prefix: 'so', icons: Solar })
+IconSets.set('ep', { prefix: 'ep', icons: ElementPlus })
+IconSets.set('te', { prefix: 'te', icons: TwitterEmoji })
+IconSets.set('ph', { prefix: 'ph', icons: Phosphor })
+IconSets.set('su', { prefix: 'su', icons: SystemUicons })
 
 const _cache = new Map()
 
