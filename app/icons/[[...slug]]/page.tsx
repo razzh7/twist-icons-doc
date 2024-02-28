@@ -67,7 +67,7 @@ export default function IconPage({ params }: IconPageProps) {
                     <Icon />
                   </div>
                 ))
-              ) : <div className="text-lg">No match Icons</div>
+              ) : <div className="text-lg">No matched Icons</div>
             }
           </div>
           {
