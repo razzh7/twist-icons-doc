@@ -27,8 +27,8 @@ dependencies:
     specifier: ^1.1.5
     version: 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)
   '@twist-space/react-icons':
-    specifier: ^0.2.14
-    version: 0.2.14
+    specifier: ^0.2.15
+    version: 0.2.15
   '@vercel/analytics':
     specifier: ^1.1.2
     version: 1.1.2
@@ -1725,8 +1725,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@twist-space/react-icons@0.2.14:
-    resolution: {integrity: sha512-fiZMZaK2WfeQEOEe1760T5gc7/vHxpYUKId51AyG7+VTZMRaCiN58XLpvMaViWNNAUdQhxqWWVnJ6NMPlRnmiw==}
+  /@twist-space/react-icons@0.2.15:
+    resolution: {integrity: sha512-zljWFu4A2VcDbhzbgLHU44MZWBgT+EsiNb/SZtBoLIjqi1/m4k0SWDDcrpi+bej+Rl93l3vAPE5casPksf6IBQ==}
     dev: false
 
   /@types/acorn@4.0.6:
