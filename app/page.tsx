@@ -18,7 +18,7 @@ export default function Home() {
             Twist-Icons collection popular Icons provide React、Vue3 and Vue2 Icons component, you can easy use them with ES6 import.
           </span>
           <div className="flex w-full items-center justify-center space-x-4 py-4 md:pb-10">
-            <Link href='/docs'>
+            <Link href='/icons/all'>
               <Button>Get Started</Button>
             </Link>
             <Button variant='outline'>
