@@ -1,6 +1,6 @@
 {
   "name": "twist-icons-docs-shadcn",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 9210",
@@ -16,7 +16,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@radix-ui/react-toast": "^1.1.5",
-    "@twist-space/react-icons": "0.3.0-alpha.3",
+    "@twist-space/react-icons": "1.0.0-alpha.1",
     "@vercel/analytics": "^1.1.2",
     "canvg": "^4.0.1",
     "class-variance-authority": "^0.7.0",

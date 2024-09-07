@@ -14,6 +14,7 @@ import * as ElementPlus from '@twist-space/react-icons/ep'
 import * as TwitterEmoji from '@twist-space/react-icons/te'
 import * as Phosphor from '@twist-space/react-icons/ph'
 import * as SystemUicons from '@twist-space/react-icons/su'
+import * as LucideIcons from '@twist-space/react-icons/lu'
 import { IconsManifest, type IconProps, type IconType } from '@twist-space/react-icons'
 
 interface IconSets {
@@ -38,6 +39,7 @@ IconSets.set('ep', { prefix: 'ep', icons: ElementPlus })
 IconSets.set('te', { prefix: 'te', icons: TwitterEmoji })
 IconSets.set('ph', { prefix: 'ph', icons: Phosphor })
 IconSets.set('su', { prefix: 'su', icons: SystemUicons })
+IconSets.set('lu', { prefix: 'lu', icons: LucideIcons })
 
 const _cache = new Map()
 
