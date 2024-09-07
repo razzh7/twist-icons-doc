@@ -15,7 +15,7 @@ export default function Home() {
             Choose your icons
           </h1>
           <span className="max-w-[750px] text-center text-lg text-muted-foreground sm:text-xl">
-            Twist-Icons collection popular Icons provide React、Vue and Vue2 Icons component, you can easy use them with ES6 import.
+            Twist-Icons collection popular Icons provide React、Vue3 and Vue2 Icons component, you can easy use them with ES6 import.
           </span>
           <div className="flex w-full items-center justify-center space-x-4 py-4 md:pb-10">
             <Link href='/docs'>

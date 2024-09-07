@@ -4240,9 +4240,13 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
+<<<<<<< HEAD
   '@twist-space/react-icons@1.0.0-alpha.1(react@18.2.0)':
     dependencies:
       react: 18.2.0
+=======
+  '@twist-space/react-icons@0.3.0': {}
+>>>>>>> e620aee578ff19da4187d1c49c3c51c439678284
 
   '@types/acorn@4.0.6':
     dependencies:
