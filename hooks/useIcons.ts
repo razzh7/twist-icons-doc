@@ -17,10 +17,10 @@ export function useIcons(id: string) {
   const specifiedIcons = getIcons(id)
   const searchIcons = useDebouncedCallback((value: string) => {
     const curIcons = currentPath === 'all' ? allIcons : specifiedIcons
-    const serachResult = curIcons.filter(
+    const searchResult = curIcons.filter(
       ({ name }: IconProps) => name.toLowerCase().includes(value.toLowerCase())
     )
-    setIcons(serachResult)
+    setIcons(searchResult)
   }, 300)
 
   const updateParams = (value: string) => {
