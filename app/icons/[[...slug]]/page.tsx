@@ -6,7 +6,7 @@ import { useIcons, useModal } from '@/hooks'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Modal } from '@/components/modal'
-import type { IconType } from '@twist-space/react-icons'
+import type { IconType } from '@twistify/react-icons'
 import style from '../index.module.css'
 
 interface IconPageProps {

@@ -2,7 +2,7 @@
 import { Nav } from "@/components/nav"
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { AiGithubOutlined } from '@twist-space/react-icons/ai'
+import { AiGithubOutlined } from '@twistify/react-icons/ai'
 import { EntryCard } from "@/components/entry-card"
 
 export default function Home() {

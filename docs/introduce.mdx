@@ -1,6 +1,13 @@
 # TwistIcons
 English | [简体中文](https://github.com/twist-space/twist-icons/blob/main/README.zh.md)
 
+| package                 | version |
+| ------------------------| --------|
+| @twistify/react-icons| [![npm version](https://img.shields.io/npm/v/@twistify/react-icons.svg)](https://www.npmjs.com/package/@twistify/react-icons) |
+| @twistify/vue3-icons | [![npm version](https://img.shields.io/npm/v/@twistify/vue3-icons.svg)](https://www.npmjs.com/package/@twistify/vue3-icons)|
+| @twistify/vue2-icons | [![npm version](https://img.shields.io/npm/v/@twistify/vue2-icons.svg)](https://www.npmjs.com/package/@twistify/vue2-icons)|
+| @twistify/icons-plugin | [![npm version](https://img.shields.io/npm/v/@twistify/icons-plugin.svg)](https://www.npmjs.com/package/@twistify/icons-plugin)|
+
 Twist-Icons is a set of high-quality `SVG` icon libraries. It collection popular Icons provide `React`、`Vue3` and `Vue2` Icons component, you can easy use them with ES6 import.
 
 ## Usage
@@ -8,14 +15,14 @@ Twist-Icons is a set of high-quality `SVG` icon libraries. It collection popular
 ### For React
 
 ```bash
-npm i @twist-space/react-icons
+npm i @twistify/react-icons --save
 ```
 
 
 ```tsx
-import { IconProvider } from '@twist-space/react-icons'
-import { AiThunderboltFilled } from '@twist-space/react-icons/ai'
-import { TiModeDark } from '@twist-space/react-icons/ti'
+import { IconProvider } from '@twistify/react-icons'
+import { AiThunderboltFilled } from '@twistify/react-icons/ai'
+import { TiModeDark } from '@twistify/react-icons/ti'
 
 export default function App() {
   return (
@@ -30,15 +37,15 @@ export default function App() {
 ### For Vue3
 
 ```bash
-npm i @twist-space/vue3-icons
+npm i @twistify/vue3-icons --save
 ```
 
 
 ```vue
 <script setup lang="ts">
-import { IconProvider } from '@twist-space/vue3-icons'
-import { AiThunderboltFilled } from '@twist-space/vue3-icons/ai'
-import { TiModeDark } from '@twist-space/vue3-icons/ti'
+import { IconProvider } from '@twistify/vue3-icons'
+import { AiThunderboltFilled } from '@twistify/vue3-icons/ai'
+import { TiModeDark } from '@twistify/vue3-icons/ti'
 </script>
 
 <template>
@@ -52,7 +59,7 @@ import { TiModeDark } from '@twist-space/vue3-icons/ti'
 ### For Vue2
 
 ```bash
-npm i @twist-space/vue2-icons
+npm i @twistify/vue2-icons --save
 ```
 
 ```vue
@@ -64,9 +71,9 @@ npm i @twist-space/vue2-icons
 </template>
 
 <script>
-import { IconProvider } from '@twist-space/vue2-icons'
-import { AiThunderboltFilled } from '@twist-space/vue2-icons/ai'
-import { TiModeDark } from '@twist-space/vue2-icons/ti'
+import { IconProvider } from '@twistify/vue2-icons'
+import { AiThunderboltFilled } from '@twistify/vue2-icons/ai'
+import { TiModeDark } from '@twistify/vue2-icons/ti'
 export default {
   components: {
     IconProvider,
@@ -95,6 +102,8 @@ An universal icon component is provided for customizing color & size of the inne
 
 IconProvider will affect all the descendant Icons' default prop value, but the priority less than icon component user props.
 
+#### React IconProvider API
+
 | prop  | type               | default | description            |
 | ----- | ------------------ | ------- | ---------------------- |
 | size  | `number`           | -       | Size of the icon       |
@@ -103,19 +112,26 @@ IconProvider will affect all the descendant Icons' default prop value, but the p
 | class | `string`           | -       | Class of the icon      |
 | attrs | `SVGAttributes`    | -       | SVGAttributes of the icon |
 
+#### Vue IconProvider API
+
+| prop  | type               | default | description            |
+| ----- | ------------------ | ------- | ---------------------- |
+| size  | `number`           | -       | Size of the icon       |
+| color | `string`           | -       | Color of the icon      |
+
 ### Auto Import
 
 If your project use `Vue3` or `Vue2`, you can use the [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) plugin to automatically import components without using import icon component in the project.
 
 ```bash
-npm i unplugin-vue-components @twist-space/twist-icons-plugins -D
+npm i unplugin-vue-components @twistify/icons-plugin -D
 ```
 
 ```typescript
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
-import { TwistIconsVueResolver } from '@twist-space/twist-icons-plugins'
+import { TwistIconsVueResolver } from '@twistify/icons-plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -137,26 +153,39 @@ export default defineConfig({
   className='mt-8 w-full'
 />
 
-### Related project
+## Migrate to @twistify
 
-<div className="mt-6">
-  <a 
-    href='https://github.com/react-icons/react-icons' 
-    target='_blank'
-    className='font-medium underline underline-offset-4'
-  >
-    react-icons
-  </a>
+To improved ease of use and efficiency, the `@twist-space` namespace migrate to `@twistify`.
+
+### Why the Change?
+
+The primary reason for this migration is to simplify the typing and usage experience. The `@twistify` namespace eliminates the hyphen **(-)** present in @twist-space, making it quicker and more convenient to input, especially during frequent development tasks. This small change helps streamline workflows, reducing the potential for typing errors and saving time.
+
+### What’s Changing?
+
+<div className="flex flex-col gap-2 mt-6 font-medium">
+  <p className="font-bold">Old Packages:</p>
+  <p>@twist-space/react-icons</p>
+  <p>@twist-space/vue3-icons</p>
+  <p>@twist-space/vue2-icons</p>
+  <p>@twist-space/twist-icons-plugins</p>
 </div>
-<div>
-  <a 
-    href='https://github.com/antfu/icones'
-    target='_blank'
-    className='font-medium underline underline-offset-4'
-  >
-    icones
-  </a>
+
+<div className="flex flex-col gap-2 mt-6 font-medium">
+  <p className="font-bold">New Packages: </p>
+  <p>@twistify/react-icons</p>
+  <p>@twistify/vue3-icons</p>
+  <p>@twistify/vue2-icons</p>
+  <p>@twistify/icons-plugin</p>
 </div>
+
+### Credits
+
+This project inspired by `react-icons`、`xicons`、`ant-design-icons`. The project Icons source from `iconify`, I learned a lot from it.
+- [iconify](https://github.com/iconify/iconify)
+- [ant-design-icons](https://github.com/ant-design/ant-design-icons)
+- [react-icons](https://github.com/react-icons/react-icons)
+- [xicons](https://github.com/07akioni/xicons)
 
 <div className="flex justify-between w-full" style={{ marginTop: '20px' }}>
   <Button variant="outline">

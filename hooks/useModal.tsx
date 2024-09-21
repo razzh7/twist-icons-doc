@@ -1,5 +1,5 @@
 import { ReactElement, useState } from "react"
-import type { IconType } from "@twist-space/react-icons"
+import type { IconType } from "@twistify/react-icons"
 import type { IconProps } from "@/types/icons"
 
 export function useModal() {

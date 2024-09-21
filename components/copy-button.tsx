@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
-import { RaCheck, RaCopy } from "@twist-space/react-icons/ra"
+import { RaCheck, RaCopy } from "@twistify/react-icons/ra"
 import { cn } from '@/lib/utils'
 import cpoy from 'copy-to-clipboard'
 

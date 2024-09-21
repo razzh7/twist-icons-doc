@@ -6,7 +6,7 @@ import { Analytics } from '@/components/analytics'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans"
 })

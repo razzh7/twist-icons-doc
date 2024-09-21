@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconType } from "@twist-space/react-icons"
+import { IconType } from "@twistify/react-icons"
 
 export interface IconProps {
   prefix: string

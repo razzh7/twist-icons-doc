@@ -2,7 +2,7 @@ import { Dialog, DialogHeader, DialogContent, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button"
 import { useActions } from "@/hooks"
 import { ShadowDom } from "@/components/shadow-dom"
-import type { IconType } from "@twist-space/react-icons"
+import type { IconType } from "@twistify/react-icons"
 
 interface ModalProps {
   open: boolean

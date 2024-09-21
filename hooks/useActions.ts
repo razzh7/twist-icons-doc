@@ -3,7 +3,7 @@ import copy from 'copy-to-clipboard'
 import { Canvg, type RenderingContext2D } from 'canvg'
 import { download, downloadDataURL, renderToString } from '@/lib/utils'
 import type { ReactElement } from "react"
-import type { IconType } from '@twist-space/react-icons'
+import type { IconType } from '@twistify/react-icons'
 
 export function useActions() {
   const { toast } = useToast()

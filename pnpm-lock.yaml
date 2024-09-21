@@ -29,9 +29,9 @@ importers:
       '@radix-ui/react-toast':
         specifier: ^1.1.5
         version: 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@twist-space/react-icons':
-        specifier: 1.0.0-alpha.1
-        version: 1.0.0-alpha.1(react@18.2.0)
+      '@twistify/react-icons':
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1(react@18.2.0)
       '@vercel/analytics':
         specifier: ^1.1.2
         version: 1.1.2
@@ -983,8 +983,8 @@ packages:
   '@swc/helpers@0.5.2':
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
 
-  '@twist-space/react-icons@1.0.0-alpha.1':
-    resolution: {integrity: sha512-S+Uec64+/0CFiRJNpio9leFrs/oBeoRHNYyDe4VQuDmUG0Qbwj9voWbJFJPmr/LqSWwkng1RC2y98GGxscT9mw==}
+  '@twistify/react-icons@1.0.0-beta.1':
+    resolution: {integrity: sha512-cR5gdnTzDgKDXf+L/vAPTHakRtHNDMW8MNUOOs67Gq3gEZr0lIIdsj1PA4EzB8FClNHhmkHpQd+RrDsQ+j9rHA==}
     peerDependencies:
       react: '*'
 
@@ -4240,7 +4240,7 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
-  '@twist-space/react-icons@1.0.0-alpha.1(react@18.2.0)':
+  '@twistify/react-icons@1.0.0-beta.1(react@18.2.0)':
     dependencies:
       react: 18.2.0
 
