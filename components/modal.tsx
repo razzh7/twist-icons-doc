@@ -14,7 +14,7 @@ interface ModalProps {
 
 export function Modal(props: ModalProps) {
   const { open, setOpen, prefix, name: IconName, Icon } = props
-  const { copyName, copySVG, copyComponentCode, downloadSVG, downloadPNG } = useActions()
+  const { copyFirstImport, copyName, copySVG, copyComponentCode, downloadSVG, downloadPNG } = useActions()
 
   const snippets = [
     {
@@ -32,6 +32,21 @@ export function Modal(props: ModalProps) {
     {
       name: 'Copy Vue Code',
       onCopy: () => copyComponentCode(IconName)
+    }
+  ]
+
+  const copyImport = [
+    {
+      name: 'Copy React Import',
+      onCopy: () => copyFirstImport(prefix, IconName, 'react')
+    },
+    {
+      name: 'Copy Vue3 Import',
+      onCopy: () => copyFirstImport(prefix, IconName, 'vue3')
+    },
+    {
+      name: 'Copy Vue2 Import',
+      onCopy: () => copyFirstImport(prefix, IconName, 'vue2')
     }
   ]
 
@@ -56,6 +71,20 @@ export function Modal(props: ModalProps) {
           </ShadowDom>
           <div className="flex flex-col gap-2">
             <div>Snippets</div>
+            <div className="flex gap-2">
+              {
+                copyImport.map(({ name, onCopy }) => (
+                  <Button
+                    key={name}
+                    onClick={onCopy}
+                    size='sm'
+                    variant="outline"
+                  >
+                    {name}
+                  </Button>
+                ))
+              }
+            </div>
             <div className="flex gap-2">
               {
                 snippets.map(({ name, onCopy }) => (
