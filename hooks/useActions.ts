@@ -8,7 +8,7 @@ import type { IconType } from '@twistify/react-icons'
 export function useActions() {
   const { toast } = useToast()
   const copyFirstImport = async (prefix: string, iconName: string, type: 'react' | 'vue3' | 'vue2') => {
-    await copy(`import { ${iconName} } from '@twistify/${type}-icons/${prefix}`)
+    await copy(`import { ${iconName} } from '@twistify/${type}-icons/${prefix}';`)
     toast({
       title: `Copied Success`
     })
