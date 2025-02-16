@@ -35,6 +35,12 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED=1
 
+# Update corepack to the latest version
+RUN npm install -g corepack@latest
+
+# Check corepack version
+RUN corepack --version
+
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \
   elif [ -f package-lock.json ]; then npm run build; \
